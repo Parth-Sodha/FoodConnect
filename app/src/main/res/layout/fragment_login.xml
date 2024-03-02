@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_88sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_62sdp"
+            android:src="@drawable/app_logo" />
+
+        <LinearLayout
+            android:id="@+id/login_acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="@dimen/_53sdp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_21sdp">
+
+            <TextView
+                android:id="@+id/login_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_your_account"
+                android:fontFamily="@font/librecaslon_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_19sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_slogan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_txt"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/login_slog"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_mobile_no"
+                style="@style/Edt_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_slogan"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundMode="outline"
+                app:hintTextColor="@color/black"
+                app:startIconDrawable="@drawable/ic_call"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:fontFamily="@font/librecaslo_font"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/login_pass"
+                style="@style/Edt_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_mobile_no"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:boxBackgroundMode="outline"
+                app:hintTextColor="@color/black"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimary"
+                app:startIconDrawable="@drawable/password_check"
+                app:startIconTint="@color/colorPrimary"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/librecaslo_font"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/btn_submit"
+                android:padding="@dimen/_14sdp"
+                android:text="Login"
+                android:outlineSpotShadowColor="@color/white"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.tm109.foodconnect.helper.CustomTextViewBold
+                android:id="@+id/txt_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/register_new_account"
+                style="@style/black_14"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_skip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_47sdp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_21sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_submit"
+            >
+
+            <LinearLayout
+                android:layout_width="@dimen/_66sdp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/rounded_12"
+                >
+
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/ic_arrow"
+                    />
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/ic_arrow"
+                    />
+
+            </LinearLayout>
+
+            <com.tm109.foodconnect.helper.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:text="@string/skip_for_now"
+                style="@style/white_16"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bottom_img"
+            android:layout_width="@dimen/_205sdp"
+            android:layout_height="@dimen/_195sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/end_design" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

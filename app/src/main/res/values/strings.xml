@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Food Connect</string>
+    <string name="login_your_account">Login Your Account</string>
+    <string name="login_slog">If You Forget Your password Click Below contact support</string>
+    <string name="register_new_account">Register New Account</string>
+    <string name="skip_for_now">Skip for Now</string>
+    <string name="register_slog">If you have already an account, please go to\nLogin Account</string>
+    <string name="upload_profile_photo">Upload Profile\nPhoto</string>
+    <string name="register">Register</string>
+    <string name="city">City</string>
+    <string name="password">Password</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+</resources>
