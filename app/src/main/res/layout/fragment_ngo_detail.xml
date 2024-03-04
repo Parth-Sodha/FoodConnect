@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_border_16"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.tm109.foodconnect.helper.CustomTextViewBold
+            style="@style/white_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/img_back"
+            android:gravity="center"
+            android:text="Details"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_ngo"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/img_ngo"
+                android:orientation="vertical">
+
+                <com.tm109.foodconnect.helper.CustomTextViewBold
+                    android:id="@+id/txt_name"
+                    style="@style/black_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NGO name" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewBold
+                    android:id="@+id/txt_email"
+                    style="@style/black_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ngo123@gmail.com" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewBold
+                    android:id="@+id/txt_state"
+                    style="@style/black_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rajkot, Gujarat" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_location" />
+
+        </RelativeLayout>
+
+        <com.tm109.foodconnect.helper.CustomTextViewBold
+            android:id="@+id/txt_address"
+            style="@style/black_14"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address" />
+
+        <com.tm109.foodconnect.helper.CustomTextView
+            android:id="@+id/txt_address"
+            style="@style/black_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="address....................................." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                style="@style/black_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acivements:" />
+
+            <com.tm109.foodconnect.helper.CustomTextView
+                android:id="@+id/txt_achivements"
+                style="@style/black_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Right Education for Children. 1 out of 3 children drop out even before elementary school since they do not possess the environment for propagating education." />
+
+            <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                style="@style/black_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Contact Info:" />
+
+            <LinearLayout
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.tm109.foodconnect.helper.CustomTextViewMedium
+                    style="@style/black_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Contact Person: " />
+
+                <com.tm109.foodconnect.helper.CustomTextView
+                    android:id="@+id/txt_contact_person"
+                    style="@style/black_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harshang Thakar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_height="wrap_content">
+
+                <com.tm109.foodconnect.helper.CustomTextViewMedium
+                    style="@style/black_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Contact No: " />
+
+                <com.tm109.foodconnect.helper.CustomTextView
+                    android:id="@+id/txt_contact_mobile"
+                    style="@style/black_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9898989898" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

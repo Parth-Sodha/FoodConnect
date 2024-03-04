@@ -30,10 +30,12 @@ public class SplashActivity extends AppCompatActivity {
         if(SecurePreferences.getBooleanPreference(SplashActivity.this, AppConstant.IS_LOGIN))
         {
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            finish();
         }
         else
         {
             startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+            finish();
         }
     }
 }

@@ -71,14 +71,13 @@
                 app:startIconTint="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_mobile"
+                    android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Mobile Number"
+                    android:hint="Email"
                     android:fontFamily="@font/librecaslo_font"
-                    android:imeOptions="actionDone"
-                    android:inputType="number"
-                    android:maxLength="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -100,7 +99,7 @@
                 tools:ignore="UselessParent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_password"
+                    android:id="@+id/edt_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/librecaslo_font"

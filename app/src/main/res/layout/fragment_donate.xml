@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_border_16"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.tm109.foodconnect.helper.CustomTextViewBold
+            style="@style/white_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/img_back"
+            android:gravity="center"
+            android:text="Donate"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_bg" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_header"
+                android:layout_marginHorizontal="@dimen/_9sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.tm109.foodconnect.helper.CustomTextViewBold
+                    style="@style/black_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:text="Primary Information" />
+
+                <View
+                    android:layout_width="@dimen/_155sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/colorPrimary" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/edit_txt_style"
+                    android:hint="Name"
+                    android:paddingHorizontal="@dimen/_10sdp" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Mobile Number" />
+
+                <EditText
+                    android:id="@+id/edt_mobile"
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/edit_txt_style"
+                    android:hint="Mobile Number"
+                    android:paddingHorizontal="@dimen/_10sdp" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/edit_txt_style"
+                    android:hint="Email"
+                    android:paddingHorizontal="@dimen/_10sdp" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewBold
+                    style="@style/black_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Location" />
+
+                <View
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                            style="@style/black_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="State" />
+
+                        <EditText
+                            android:id="@+id/edt_state"
+                            style="@style/black_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/edit_txt_style"
+                            android:hint="State"
+                            android:paddingHorizontal="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                            style="@style/black_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="City" />
+
+                        <EditText
+                            android:id="@+id/edt_city"
+                            style="@style/black_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/edit_txt_style"
+                            android:hint="City"
+                            android:paddingHorizontal="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Address" />
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/edit_txt_style"
+                    android:hint="Address"
+                    android:paddingHorizontal="@dimen/_10sdp" />
+
+                <com.tm109.foodconnect.helper.CustomTextViewBold
+                    style="@style/black_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="About Food" />
+
+                <View
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/colorPrimary" />
+
+
+                <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                    style="@style/black_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Type" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lin_veg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/primary_border_rounded_5"
+                        android:paddingLeft="@dimen/_10sdp">
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_veg"
+                            style="@style/black_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:checked="true"
+                            android:text="Vegitarian" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_non_veg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_border_rounded_5"
+                        android:paddingLeft="@dimen/_10sdp">
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_non_veg"
+                            style="@style/black_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Non-Vegitarian" />
+
+                    </LinearLayout>
+
+                </RadioGroup>
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/edt_type"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/_40sdp"-->
+                <!--                    style="@style/black_12"-->
+                <!--                    android:layout_marginTop="@dimen/_2sdp"-->
+                <!--                    android:background="@drawable/edit_txt_style"-->
+                <!--                    android:hint="Type"-->
+                <!--                    android:paddingHorizontal="@dimen/_10sdp" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                        style="@style/black_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Date of Food Cooked" />
+
+                    <com.tm109.foodconnect.helper.CustomTextViewMedium
+                        android:id="@+id/txt_coocking_date"
+                        style="@style/black_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@drawable/edit_txt_style"
+                        android:gravity="center_vertical"
+                        android:hint="Select Date"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingHorizontal="@dimen/_10sdp" />
+
+                    <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                        style="@style/black_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Expire Date of Food" />
+
+                    <com.tm109.foodconnect.helper.CustomTextViewMedium
+                        android:id="@+id/txt_expire_date"
+                        style="@style/black_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@drawable/edit_txt_style"
+                        android:gravity="center_vertical"
+                        android:hint="Select Date"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingHorizontal="@dimen/_10sdp" />
+
+                    <com.tm109.foodconnect.helper.CustomTextViewSemiBold
+                        style="@style/black_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Description" />
+
+                    <EditText
+                        android:id="@+id/edt_description"
+                        style="@style/black_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_85sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@drawable/edit_txt_style"
+                        android:gravity="top"
+                        android:hint="Description"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_6sdp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/btn_submit"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:padding="@dimen/_12sdp"
+                        android:text="@string/submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            style="@style/Edt_box"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:hint="Name"-->
+    <!--            app:hintTextColor="@color/black"-->
+    <!--            tools:ignore="UselessParent">-->
+
+    <!--            <com.tm109.foodconnect.helper.CustomEdittext-->
+    <!--                android:id="@+id/edt_activity_date"-->
+    <!--                style="@style/Edittext_11"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="@dimen/_45sdp"-->
+    <!--                android:clickable="true"-->
+    <!--                android:focusable="false"-->
+    <!--                android:imeOptions="actionNext"-->
+    <!--                android:inputType="text"-->
+    <!--                android:paddingHorizontal="@dimen/_10sdp"-->
+    <!--                android:singleLine="true" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+</RelativeLayout>

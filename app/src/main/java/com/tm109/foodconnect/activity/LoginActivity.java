@@ -2,7 +2,9 @@ package com.tm109.foodconnect.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.window.OnBackInvokedDispatcher;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -27,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }
-        replaceFragmentMain(new LoginFragment(), "LoginFragment");
+        loadLoginFragment(new LoginFragment(), "LoginFragment");
     }
 
     public void replaceFragmentMain(Fragment fragment, String tag) {
@@ -39,4 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         ft.add(R.id.frame_login, fragment, tag).commit();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

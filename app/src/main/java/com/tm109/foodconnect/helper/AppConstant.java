@@ -16,15 +16,29 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tm109.foodconnect.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class AppConstant {
 
-    public static String BASE_URL = "";
-    public static String IMAGE_URL = "";
+    public static String BASE_URL = "https://food-connect-backend.vercel.app/";
+    public static String IMAGE_URL = "https://food-connect-backend.vercel.app/upload/";
+
+//    public static String BASE_URL = "http://10.130.148.207:8080/";
+//    public static String IMAGE_URL = "http://10.130.148.207:8080/upload/";
+
+    public static String REGISTER_API = "ngo/register";
+    public static String LOGIN_API = "ngo/login";
+    public static String GET_NGO_LIST_API = "ngo/all-ngos";
+    public static String DONATE_FORM_API = "donor/donate";
+    public static String GET_DONOR_LIST_API = "donor/all-donate";
 
     public static String IS_LOGIN = "is_login";
     public static String USER_TYPE = "user_type";
     public static String USER_ID ="user_id";
     public static final String USER_MOBILE = "user_mobile";
+    public static final String USER_NAME = "user_name";
     public static final String USER_DETAILS = "user_details";
     public static final String ADMIN_DETAILS = "admin_details";
 
@@ -84,6 +98,35 @@ public class AppConstant {
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
+    }
+
+    public static String getCurrentDateTime() {
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH:mm:ss");
+        return dateFormat.format(calendar.getTime());
+    }
+
+    public static String getddmmyyyyDateOnly(String currentDate) {
+        try {
+            SimpleDateFormat outputFmt = new SimpleDateFormat("yyyy-MM-dd");
+            Date date = outputFmt.parse(currentDate);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(" dd-MM-yy");
+            return simpleDateFormat.format(date);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "-";
+        }
+    }
+
+    public static String getDatetimeFormat(String sDate) {
+        try {
+            SimpleDateFormat sdfSource = new SimpleDateFormat("yyyy-MM-dd");
+            Date date = sdfSource.parse(sDate);
+            SimpleDateFormat sdfDestination = new SimpleDateFormat("dd-MM-yy");
+            return sdfDestination.format(date);
+        } catch (Exception e) {
+            return "";
+        }
     }
 
 }

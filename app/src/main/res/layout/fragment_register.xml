@@ -87,7 +87,7 @@
                     android:orientation="horizontal">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/profile"
+                        android:id="@+id/img_logo"
                         android:layout_width="@dimen/_70sdp"
                         android:layout_height="@dimen/_70sdp"
                         android:src="@drawable/ic_user_placeholder"
@@ -112,16 +112,17 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_slogan"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:hint="@string/full_name"
+                    android:hint="@string/organization_name"
                     app:boxBackgroundMode="outline"
                     app:hintTextColor="@color/black">
 
                     <com.tm109.foodconnect.helper.CustomEdittext
-                        android:id="@+id/edt_name"
+                        android:id="@+id/edt_org_name"
                         style="@style/Edittext_11"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
-                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
                         android:inputType="textMultiLine"
                         android:paddingHorizontal="@dimen/_10sdp" />
 
@@ -133,7 +134,29 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_slogan"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:hint="Mobile Number"
+                    android:hint="@string/contact_person_name"
+                    app:boxBackgroundMode="outline"
+                    app:hintTextColor="@color/black">
+
+                    <com.tm109.foodconnect.helper.CustomEdittext
+                        android:id="@+id/edt_contact_name"
+                        style="@style/Edittext_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:paddingHorizontal="@dimen/_10sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Edt_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_slogan"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/contact_number"
                     app:boxBackgroundMode="outline"
                     app:hintTextColor="@color/black">
 
@@ -142,7 +165,6 @@
                         style="@style/Edittext_11"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
-
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLength="10"
@@ -166,7 +188,7 @@
                         style="@style/Edittext_11"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
-
+                        android:singleLine="true"
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/black"
@@ -206,6 +228,28 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_slogan"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/description"
+                    app:boxBackgroundMode="outline"
+                    app:hintTextColor="@color/black">
+
+                    <com.tm109.foodconnect.helper.CustomEdittext
+                        android:id="@+id/edt_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:imeOptions="actionNext"
+                        style="@style/Edittext_11"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Edt_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_slogan"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:hint="@string/address"
                     app:boxBackgroundMode="outline"
                     app:hintTextColor="@color/black">
@@ -234,6 +278,28 @@
 
                     <com.tm109.foodconnect.helper.CustomEdittext
                         android:id="@+id/edt_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        style="@style/Edittext_11"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Edt_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_slogan"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/state"
+                    app:boxBackgroundMode="outline"
+                    app:hintTextColor="@color/black">
+
+                    <com.tm109.foodconnect.helper.CustomEdittext
+                        android:id="@+id/edt_state"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:paddingHorizontal="@dimen/_10sdp"

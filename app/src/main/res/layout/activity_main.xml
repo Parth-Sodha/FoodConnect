@@ -53,7 +53,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lin_resources"
+                android:id="@+id/lin_donate"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -61,19 +61,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/img_resources"
+                    android:id="@+id/img_donate"
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
                     android:src="@drawable/ic_resources"
                     android:tint="@color/default_selected_clr" />
 
                 <com.tm109.foodconnect.helper.CustomTextViewBold
-                    android:id="@+id/txt_resources"
+                    android:id="@+id/txt_donate"
                     style="@style/gray_13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:text="Add Resources"
+                    android:text="Donate"
                     android:textColor="@color/default_selected_clr" />
 
             </LinearLayout>

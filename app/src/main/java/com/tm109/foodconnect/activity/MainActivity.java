@@ -4,16 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.animation.ObjectAnimator;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tm109.foodconnect.R;
-import com.tm109.foodconnect.fragments.AddResourcesFragment;
-import com.tm109.foodconnect.fragments.HomeFragment;
-import com.tm109.foodconnect.fragments.ProfileFragment;
+import com.tm109.foodconnect.fragments.donate.DonateFragment;
+import com.tm109.foodconnect.fragments.home.HomeFragment;
+import com.tm109.foodconnect.fragments.profile.ProfileFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,17 +24,14 @@ public class MainActivity extends AppCompatActivity {
     ImageView img_home;
     @BindView(R.id.txt_home)
     TextView txt_home;
-
-    @BindView(R.id.img_resources)
-    ImageView img_resources;
-    @BindView(R.id.txt_resources)
-    TextView txt_resources;
-
+    @BindView(R.id.img_donate)
+    ImageView img_donate;
+    @BindView(R.id.txt_donate)
+    TextView txt_donate;
     @BindView(R.id.img_profile)
     ImageView img_profile;
     @BindView(R.id.txt_profile)
     TextView txt_profile;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
         setThemeColor(1);
     }
 
-    @OnClick(R.id.lin_resources)
+    @OnClick(R.id.lin_donate)
     public void resourcesClick() {
-        replaceFragmentMain(new AddResourcesFragment(), "AddResourcesFragment");
+        replaceFragmentMain(new DonateFragment(), "DonateFragment");
         setDefaultColor();
         setThemeColor(2);
     }
@@ -82,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 txt_home.setTextColor(getResources().getColor(R.color.colorPrimary));
                 break;
             case 2:
-                img_resources.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
-                txt_resources.setTextColor(getResources().getColor(R.color.colorPrimary));
+                img_donate.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
+                txt_donate.setTextColor(getResources().getColor(R.color.colorPrimary));
                 break;
             case 3:
                 img_profile.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
@@ -96,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
         img_home.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.default_selected_clr)));
         txt_home.setTextColor(getResources().getColor(R.color.default_selected_clr));
 
-        img_resources.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.default_selected_clr)));
-        txt_resources.setTextColor(getResources().getColor(R.color.default_selected_clr));
+        img_donate.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.default_selected_clr)));
+        txt_donate.setTextColor(getResources().getColor(R.color.default_selected_clr));
 
         img_profile.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.default_selected_clr)));
         txt_profile.setTextColor(getResources().getColor(R.color.default_selected_clr));
